@@ -89,7 +89,7 @@ shinyServer(function(input, output) {
     wordcloud2(p, size=input$size/100)
   })
   
-
+  
   #output$plotrules<-renderPlot({plot.igraph(graph)})
   output$plotrules2 <- renderPlotly({
     plotly_arules(rules,method="scatterplot", measure = c("confidence", "lift"),shading = "support", max = 1000)
@@ -97,5 +97,5 @@ shinyServer(function(input, output) {
   output$plotrules2_stemmed <- renderPlotly({
     plotly_arules(rules_stemmed,method="scatterplot", measure = c("confidence", "lift"),shading = "support", max = 1000)
   })
-
+  
 })
